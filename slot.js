@@ -15,24 +15,24 @@ $(document).ready(function() {
     var completed = 0,
         imgHeight = 4800,
         posArr = [
-            0, //image1
-            300, //image2 
-            600, //image3
-            900, //guava
-            1200, //banana
-            1500, //cherry
-            1800, //orange
-            2100, //number 7
-            2400, //bar
-            2700, //guava
-            3000, //banana
-            3300, //cherry
-            3600, //orange
-            3900, //number 7
-            4200, //bar
-            4500, //guava
-            4800, //banana
-            5100 //cherry
+            75, //image1
+            375, //image2 
+            675, //image3
+            975, //guava
+            1275, //banana
+            1575, //cherry
+            1875, //orange
+            2175, //number 7
+            2475, //bar
+            2775, //guava
+            3075, //banana
+            3375, //cherry
+            3675, //orange
+            3975, //number 7
+            4275, //bar
+            4575, //guava
+            4875, //banana
+            5175 //cherry
         ];
     
     var win = [];
@@ -56,7 +56,7 @@ $(document).ready(function() {
         this.pos = null; //final position of the slot    
 
         $(el).pan({
-            fps:30,
+            fps:25,
             dir:'down'
         });
         $(el).spStop();
