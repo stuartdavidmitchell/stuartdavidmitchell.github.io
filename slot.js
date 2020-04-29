@@ -8,7 +8,6 @@
 *
 * Date: May 23, 2011 
 */
-
 $(document).ready(function() {
     /**
     * Global variables
@@ -35,8 +34,7 @@ $(document).ready(function() {
             1230, //banana
             1298 //cherry
         ];
-
-   
+    
     var win = [];
     win[0] = win[454] = win[913] = 1;
     win[80] = win[539] = win[1000] = 2;
@@ -84,7 +82,6 @@ $(document).ready(function() {
     * @method stop
     * Stops a slot
     */
-
     Slot.prototype.stop = function() {
         var _this = this,
             limit = 30;
@@ -150,7 +147,7 @@ $(document).ready(function() {
                 completed ++;
             }
         });
-    };
+    };  
 
     /**
     * @method reset
@@ -198,9 +195,9 @@ $(document).ready(function() {
             b.start();
             c.start();
             this.innerHTML = "Stop";
-
+            
             disableControl(); //disable control until the slots reach max speed
-
+            
             //check every 100ms if slots have reached max speed 
             //if so, enable the control
             x = window.setInterval(function() {
@@ -216,7 +213,7 @@ $(document).ready(function() {
             this.innerHTML = "Reset";
 
             disableControl(); //disable control until the slots stop
-          
+
             //check every 100ms if slots have stopped
             //if so, enable the control
             x = window.setInterval(function() {
