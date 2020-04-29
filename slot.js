@@ -36,12 +36,12 @@ $(document).ready(function() {
         ];
     
     var win = [];
-    win[0] = win[1800] = win[3600] = 1;
-    win[300] = win[2100] = win[3900] = 2;
-    win[600] = win[2400] = win[4200] = 3;
-    win[900] = win[2700] = win[4500] = 4;
-    win[1200] = win[3000] = win[4800] = 5;
-    win[1500] = win[3300] = win[5100] = 6;
+    win[75]   = win[1875] = win[3675] = 1;
+    win[375]  = win[2175] = win[3975] = 2;
+    win[675]  = win[2475] = win[4275] = 3;
+    win[975]  = win[2775] = win[4575] = 4;
+    win[1275] = win[3075] = win[4875] = 5;
+    win[1575] = win[3375] = win[5175] = 6;
 
     /**
     * @class Slot
