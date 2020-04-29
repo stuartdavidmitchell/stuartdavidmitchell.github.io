@@ -156,7 +156,7 @@ $(document).ready(function() {
     Slot.prototype.reset = function() {
         var el_id = $(this.el).attr('id');
         $._spritely.instances[el_id].t = 0;
-        $(this.el).css('background-position', '0px 4px');
+        $(this.el).css('background-position', '0px 75px');
         this.speed = 0;
         completed = 0;
         $('#result').html('');
@@ -173,9 +173,9 @@ $(document).ready(function() {
     function printResult() {
         var res;
         if(win[a.pos] === win[b.pos] && win[a.pos] === win[c.pos]) {
-            res = "You Win!";
+            res = "";
         } else {
-            res = "You Lose";
+            res = "";
         }
         $('#result').html(res);
     }
