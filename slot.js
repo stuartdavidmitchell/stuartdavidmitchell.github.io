@@ -13,35 +13,35 @@ $(document).ready(function() {
     * Global variables
     */
     var completed = 0,
-        imgHeight = 1374,
+        imgHeight = 4800,
         posArr = [
-            0, //orange
-            80, //number 7 
-            165, //bar
-            237, //guava
-            310, //banana
-            378, //cherry
-            454, //orange
-            539, //number 7
-            624, //bar
-            696, //guava
-            769, //banana
-            837, //cherry
-            913, //orange
-            1000, //number 7
-            1085, //bar
-            1157, //guava
-            1230, //banana
-            1298 //cherry
+            0, //image1
+            300, //image2 
+            600, //image3
+            900, //guava
+            1200, //banana
+            1500, //cherry
+            1800, //orange
+            2100, //number 7
+            2400, //bar
+            2700, //guava
+            3000, //banana
+            3300, //cherry
+            3600, //orange
+            3900, //number 7
+            4200, //bar
+            4500, //guava
+            4800, //banana
+            5100 //cherry
         ];
     
     var win = [];
-    win[0] = win[454] = win[913] = 1;
-    win[80] = win[539] = win[1000] = 2;
-    win[165] = win[624] = win[1085] = 3;
-    win[237] = win[696] = win[1157] = 4;
-    win[310] = win[769] = win[1230] = 5;
-    win[378] = win[837] = win[1298] = 6;
+    win[0] = win[1800] = win[3600] = 1;
+    win[300] = win[2100] = win[3900] = 2;
+    win[600] = win[2400] = win[4200] = 3;
+    win[900] = win[2700] = win[4500] = 4;
+    win[1200] = win[3000] = win[4800] = 5;
+    win[1500] = win[3300] = win[5100] = 6;
 
     /**
     * @class Slot
