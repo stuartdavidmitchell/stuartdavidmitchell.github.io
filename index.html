@@ -2,9 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Slot Machine in Javascript</title>
-<meta name="description" content="Welcome to the Javascript version of Slot Machine written by Saurabh Odhyan"> 
-<meta name="keywords" content="javascript, jquery, spritely, animation, sprite, background position, slot, game, games, saurabh, odhyan">
+<title>Gambling with floods</title>
 <style>
 body {
 	font-family:verdana,arial;
@@ -15,23 +13,46 @@ body {
 }
 .container {
 	margin:0 auto;
-	width:800px;
+	width:950px;
 }
 .slot-wrapper {
-	 border: 1px solid #000000;
+	 border: 1px solid #101010;
 }
-.slot {
+.slot1 {
 	background:url("images/reel1strip.jpg") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
-	width:250px;
+	width:300px;
 	height:250px;
 	float:left;
 	border:1px solid #000;
 	background-position:0 4px;
 }
-.motion {
+.motion1 {
 	background:url("images/reel1strip.jpg") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
 }
-
+.slot2 {
+	background:url("images/reel2strip.jpg") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
+	width:300px;
+	height:250px;
+	float:left;
+	border:1px solid #000;
+	background-position:0 4px;
+}
+.motion2 {
+	background:url("images/reel2strip.jpg") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
+}
+	
+.slot3 {
+	background:url("images/reel3strip.jpg") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
+	width:300px;
+	height:250px;
+	float:left;
+	border:1px solid #000;
+	background-position:0 4px;
+}
+.motion3 {
+	background:url("images/reel3strip.jpg") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
+}
+	
 button {
 	display:block;
 	width:138px;
@@ -77,9 +98,9 @@ button {
 	<h1>Slot machine in Javascript</h1>
 	<div class="container">
 		<div class="slot-wrapper">
-			<div id="slot1" class="slot"></div>
-			<div id="slot2" class="slot"></div>
-			<div id="slot3" class="slot"></div>
+			<div id="slot1" class="slot1"></div>
+			<div id="slot2" class="slot2"></div>
+			<div id="slot3" class="slot3"></div>
 			<div class="clear"></div>
 		</div>
 		<div id="result"></div>
