@@ -170,6 +170,14 @@ $(document).ready(function() {
         $('#control').attr("disabled", true);
     }
 
+    function enableCheck() {
+        $('#check').attr("disabled", false);
+    }
+
+    function disableCheck() {
+        $('#check').attr("disabled", true);
+    }
+    
     function printResult() {
         var res;
         if(win[a.pos] === win[b.pos] && win[a.pos] === win[c.pos]) {
@@ -227,6 +235,49 @@ $(document).ready(function() {
             a.reset();
             b.reset();
             c.reset();
+            this.innerHTML = "Start";
+        }
+    });
+
+    //create slot objects
+    var d = new Slot('#slot4', 85, 4);
+
+    /**
+    * Slot machine controller
+    */
+    $('#check').click(function() {
+        var x;
+        if(this.innerHTML == "Start") {
+            d.start();
+            this.innerHTML = "Stop";
+            
+            disableCheck(); //disable control until the slots reach max speed
+            
+            //check every 100ms if slots have reached max speed 
+            //if so, enable the control
+            x = window.setInterval(function() {
+                if(d.speed >= d.maxSpeed) {
+                    enableCheck();
+                    window.clearInterval(x);
+                }
+            }, 100);
+        } else if(this.innerHTML == "Stop") {
+            d.stop();
+            this.innerHTML = "Reset";
+
+            disableCheck(); //disable control until the slots stop
+
+            //check every 100ms if slots have stopped
+            //if so, enable the control
+            x = window.setInterval(function() {
+                if(d.speed === 0) {
+                    enableCheck();
+                    window.clearInterval(x);
+                    printResult();
+                }
+            }, 100);
+        } else { //reset
+            d.reset();
             this.innerHTML = "Start";
         }
     });
