@@ -8,6 +8,8 @@
 *
 * Date: May 23, 2011 
 */
+var myPlayer = videojs('playvid');
+
 $(document).ready(function() {
     /**
     * Global variables
@@ -247,7 +249,7 @@ $(document).ready(function() {
     */
     $('#check').click(function() {
         var x;
-        var myPlayer = videojs('playvid');
+
 
 
         if(this.innerHTML == "Start") {
