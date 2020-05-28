@@ -247,6 +247,9 @@ $(document).ready(function() {
     */
     $('#check').click(function() {
         var x;
+        var myPlayer = videojs('playvid');
+
+
         if(this.innerHTML == "Start") {
             d.start();
             this.innerHTML = "Stop";
@@ -276,6 +279,9 @@ $(document).ready(function() {
                     printResult();
                 }
             }, 100);
+            // Now trigger video playback to explain result of spins
+            myPlayer.src('clipxx.mp4');
+            myPlayer.play();
         } else { //reset
             d.reset();
             this.innerHTML = "Start";
