@@ -8,7 +8,7 @@
 *
 * Date: May 23, 2011 
 */
-var myPlayer = videojs('playvid');
+var myPlayer;
 
 $(document).ready(function() {
     /**
@@ -282,6 +282,7 @@ $(document).ready(function() {
                 }
             }, 100);
             // Now trigger video playback to explain result of spins
+            myPlayer=videojs('playvid');
             myPlayer.src('clipxx.mp4');
             myPlayer.play();
         } else { //reset
