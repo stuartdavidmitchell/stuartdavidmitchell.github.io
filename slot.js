@@ -282,9 +282,8 @@ $(document).ready(function() {
                 }
             }, 100);
             // Now trigger video playback to explain result of spins
-            // myPlayer=videojs('playvid');
-            // myPlayer.src('clipxx.mp4');
-            // myPlayer.play();
+            myvideo.src('clipxx.mp4');
+            myvideo.play();
         } else { //reset
             d.reset();
             this.innerHTML = "Start";
