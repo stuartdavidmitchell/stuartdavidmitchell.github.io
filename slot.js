@@ -8,7 +8,7 @@
 *
 * Date: May 23, 2011 
 */
-var myPlayer;
+
 
 $(document).ready(function() {
     /**
@@ -45,6 +45,8 @@ $(document).ready(function() {
     win[1275] = win[3075] = win[4875] = 5;
     win[1575] = win[3375] = win[5175] = 6;
 
+    var myPlayer = videojs('playvid');
+    
     /**
     * @class Slot
     * @constructor
@@ -282,8 +284,8 @@ $(document).ready(function() {
                 }
             }, 100);
             // Now trigger video playback to explain result of spins
-            myvideo.src('clipxx.mp4');
-            myvideo.play();
+            myPlayer.src('clipxx.mp4');
+            myPlayer.play();
         } else { //reset
             d.reset();
             this.innerHTML = "Start";
