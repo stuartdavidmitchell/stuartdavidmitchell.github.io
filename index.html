@@ -67,6 +67,12 @@ body {
 	background:url("images/reel5strip.jpg") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
 }
 	
+.video1 {
+	width: 720px;
+	height: 576px;
+	float: middle;
+}
+	
 button {
 	display:block;
 	width:138px;
@@ -101,8 +107,7 @@ button {
 
 </style>
 <script type="text/javascript">
-   document.write("Hello Javascript 333")
-   var myvideo;
+   document.write("Hello version 4.1")
 </script>
 <script src="jquery.min.js"></script>
 <script src="jquery.spritely.js"></script>
@@ -124,10 +129,6 @@ button {
 		<div id="result"></div>
 		<div><button id="control">Start</button></div>
 		<div><button id="check">Check</button></div>
-</div>
-	<video id="playvid" controls="" data-setup="{}">
-  <source src="clipxx.mp4" type="video/mp4">
-</video>
-	<script> var myvideo = videojs('playvid'); </script>
+	</div> <video id="playvid" class="video1" controls="" data-setup="{}"> </video> </div>
 </body>
 </html>
