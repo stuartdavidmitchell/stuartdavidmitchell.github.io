@@ -9,6 +9,9 @@
 * Date: May 23, 2011 
 */
 
+import videojs from 'video.js';
+window.videojs = videojs;
+require('videojs-http-source-selector');
 
 $(document).ready(function() {
     /**
