@@ -9,9 +9,6 @@
 * Date: May 23, 2011 
 */
 
-import videojs from 'video.js';
-window.videojs = videojs;
-require('videojs-http-source-selector');
 
 $(document).ready(function() {
     /**
@@ -39,6 +36,8 @@ $(document).ready(function() {
             4875, //banana
             5175 //cherry
         ];
+    
+    var myVideo = document.getElementById("playvid");
     
     var win = [];
     win[75]   = win[1875] = win[3675] = 1;
@@ -287,8 +286,8 @@ $(document).ready(function() {
                 }
             }, 100);
             // Now trigger video playback to explain result of spins
-            myPlayer.src('clipxx.mp4');
-            myPlayer.play();
+            myVideo.src('clipxx.mp4');
+            myVideo.play();
         } else { //reset
             d.reset();
             this.innerHTML = "Start";
