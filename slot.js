@@ -252,14 +252,12 @@ $(document).ready(function() {
     $('#check').click(function() {
         var x;
 
-
-
         if(this.innerHTML == "Start") {
             d.start();
             this.innerHTML = "Stop";
             
             disableCheck(); //disable control until the slots reach max speed
-            
+
             //check every 100ms if slots have reached max speed 
             //if so, enable the control
             x = window.setInterval(function() {
@@ -271,6 +269,8 @@ $(document).ready(function() {
         } else if(this.innerHTML == "Stop") {
             d.stop();
             this.innerHTML = "Reset";
+            myVideo.src('clipxx.mp4');
+            myVideo.play();
 
             disableCheck(); //disable control until the slots stop
 
@@ -283,8 +283,7 @@ $(document).ready(function() {
                     printResult();
                 }
             }, 100);
-            myVideo.src('clipxx.mp4');
-            myVideo.play();
+
         } else { //reset
             d.reset();
             this.innerHTML = "Start";
