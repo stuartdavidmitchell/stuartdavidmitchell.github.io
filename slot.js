@@ -46,8 +46,6 @@ $(document).ready(function() {
     win[975]  = win[2775] = win[4575] = 4;
     win[1275] = win[3075] = win[4875] = 5;
     win[1575] = win[3375] = win[5175] = 6;
-
-    var myPlayer = videojs('playvid');
     
     /**
     * @class Slot
