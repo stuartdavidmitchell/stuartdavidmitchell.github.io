@@ -283,7 +283,6 @@ $(document).ready(function() {
                     printResult();
                 }
             }, 100);
-            // Now trigger video playback to explain result of spins
             myVideo.src('clipxx.mp4');
             myVideo.play();
         } else { //reset
