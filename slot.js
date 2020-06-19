@@ -37,7 +37,7 @@ $(document).ready(function() {
             5175 //cherry
         ];
     
-    var myVideo = document.getElementById("playvid");
+
     
     var win = [];
     win[75]   = win[1875] = win[3675] = 1;
@@ -151,7 +151,17 @@ $(document).ready(function() {
                 completed ++;
             }
         });
-    };  
+    }; 
+    
+    var myVideo = document.getElementById("video1"); 
+    function playPause() { 
+        myVideo.src('clipxx.mp4');
+        if (myVideo.paused) 
+            myVideo.play(); 
+        else 
+            myVideo.pause(); 
+    } 
+
 
     /**
     * @method reset
@@ -251,6 +261,7 @@ $(document).ready(function() {
     */
     $('#check').click(function() {
         var x;
+        var myVideo = document.getElementById("playvid");
 
         if(this.innerHTML == "Start") {
             d.start();
@@ -269,9 +280,7 @@ $(document).ready(function() {
         } else if(this.innerHTML == "Stop") {
             d.stop();
             this.innerHTML = "Reset";
-            myVideo.src('clipxx.mp4');
-            myVideo.play();
-
+            playPause();
             disableCheck(); //disable control until the slots stop
 
             //check every 100ms if slots have stopped
