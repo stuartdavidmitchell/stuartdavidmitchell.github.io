@@ -155,6 +155,7 @@ $(document).ready(function() {
     
     var myVideo = document.getElementById("video1"); 
     function playPause() { 
+        alert("in playPause");
         myVideo.src('clipxx.mp4');
         if (myVideo.paused) 
             myVideo.play(); 
