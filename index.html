@@ -1,134 +1,35 @@
-<!DOCTYPE HTML>
+!DOCTYPE HTML>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Gambling with floods</title>
-<style>
-body {
-	font-family:arial;
-	padding:20px;
-	background-image: url('images/background.png');
-}
-.bd {
-	text-align:center;
-}
-.container {
-	margin:0 auto;
-	width:1300px;
-}
-.slot-wrapper {
-	 border: 2px solid #404040;
-}
-.slot1 {
-	background:url("images/reel1strip.jpg") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
-	width:300px;
-	height:450px;
-	float:left;
-	border:1px solid #000;
-	background-position:0 4px;
-}
-.motion1 {
-	background:url("images/reel1strip.jpg") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
-}
-.slot2 {
-	background:url("images/reel2strip.jpg") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
-	width:300px;
-	height:450px;
-	float:left;
-	border:1px solid #000;
-	background-position:0 4px;
-}
-.motion2 {
-	background:url("images/reel2strip.jpg") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
-}
-	
-.slot3 {
-	background:url("images/reel3strip.jpg") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
-	width:300px;
-	height:450px;
-	float:left;
-	border:1px solid #000;
-	background-position:0 4px;
-}
-.motion3 {
-	background:url("images/reel3strip.jpg") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
-}
+<title>Gambling with floods v2</title>
 
-.slot4 {
-	background:url("images/reel4strip.jpg") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
-	width:300px;
-	height:450px;
-	float:right;
-	border:1px solid #000;
-	background-position:0 4px;
-}
-.motion4 {
-	background:url("images/reel5strip.jpg") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
-}
-	
-.video1 {
-	width: 720px;
-	height: 576px;
-
-	}
-	
-	
-button {
-	display:block;
-	width:138px;
-	height:33px;
-	margin:20px 60px;
-	font-size:16px;
-	cursor:pointer;
-}
-
-#result {
-	margin:20px 0;
-	font-size:18px;
-	font-weight:bold;
-	height:22px;
-}
-
-.credits {
-	font-size:15px;
-	margin-top:20px;
-}
-
-.credits .browsers {
-	font-style:italic;
-	font-size:14px;
-	color:#777;
-	margin-top:4px;
-}
-
-.clear {
-	clear:both;
-}
-
-</style>
 <script type="text/javascript">
-   document.write("Hello version 4.1")
+   document.write("Hello version 5")
 </script>
-<script src="jquery.min.js"></script>
-<script src="jquery.spritely.js"></script>
-<script src="jquery.backgroundPosition.js"></script>
-<script src="slot.js"></script>
+
+<script type="text/javascript">
+  
+</script>
+function random(){
+document.getElementById("one").innerHTML = Math.floor(Math.random() * 10);
+}
 </head>
+
 <body>
 <div class="hd">
 </div>
 <div class="bd">
-	<h1 style="color:white">Gambling with floods</h1>
-	<div class="container">
-		<div class="slot-wrapper">
-			<div id="slot1" class="slot1"></div>
-			<div id="slot2" class="slot2"></div>
-			<div id="slot3" class="slot3"></div>
-			<div id="slot4" class="slot4"></div>
-		</div>
-		<div id="result"></div>
-		<div><button id="control">Start</button></div>
-		<div><button id="check">Check</button></div>
-	</div> <video id="video1" class="video1" controls=""> </video> </div>
+	<h1 style="color:white">Gambling with floods v2</h1>
+	<div>
+		<video width="720" height="576" id="reelsleft" controls> 
+		<source src="clipxx.mpg" type="video/mp4">
+		</video>
+		<video id="reelsright" controls>
+		</video>
+	</div>
+	<div>
+		<button onclick="random()">Random</button>
+	</div>
 </body>
 </html>
