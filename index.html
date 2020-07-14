@@ -20,7 +20,7 @@ body {
 	 border: 2px solid #404040;
 }
 .slot1 {
-	background:url("images/reel1strip.jpg") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
+	background:url("images/reel1strip.jpg") repeat-y;
 	width:300px;
 	height:450px;
 	float:left;
@@ -28,10 +28,10 @@ body {
 	background-position:0 4px;
 }
 .motion1 {
-	background:url("images/reel1strip.jpg") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
+	background:url("images/reel1strip.jpg") repeat-y;
 }
 .slot2 {
-	background:url("images/reel2strip.jpg") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
+	background:url("images/reel2strip.jpg") repeat-y;
 	width:300px;
 	height:450px;
 	float:left;
@@ -39,11 +39,11 @@ body {
 	background-position:0 4px;
 }
 .motion2 {
-	background:url("images/reel2strip.jpg") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
+	background:url("images/reel2strip.jpg") repeat-y;
 }
 	
 .slot3 {
-	background:url("images/reel3strip.jpg") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
+	background:url("images/reel3strip.jpg") repeat-y;
 	width:300px;
 	height:450px;
 	float:left;
@@ -51,11 +51,11 @@ body {
 	background-position:0 4px;
 }
 .motion3 {
-	background:url("images/reel3strip.jpg") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
+	background:url("images/reel3strip.jpg") repeat-y;
 }
 
 .slot4 {
-	background:url("images/reel4strip.jpg") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
+	background:url("images/reel4strip.jpg") repeat-y;
 	width:300px;
 	height:450px;
 	float:right;
@@ -63,15 +63,24 @@ body {
 	background-position:0 4px;
 }
 .motion4 {
-	background:url("images/reel5strip.jpg") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
+	background:url("images/reel4strip.jpg") repeat-y;
 }
 	
 .video1 {
-	width: 720px;
-	height: 576px;
+	width: 576px;
+	height: 460px;
 
 	}
 	
+.button1 {
+        float:left;
+        border: 5px;
+}
+
+.button2 {
+        float:right;
+        border: 5px;
+}
 	
 button {
 	display:block;
@@ -104,19 +113,14 @@ button {
 .clear {
 	clear:both;
 }
-
 </style>
-<script type="text/javascript">
-   document.write("Hello version 4.1")
-</script>
+
 <script src="jquery.min.js"></script>
 <script src="jquery.spritely.js"></script>
 <script src="jquery.backgroundPosition.js"></script>
 <script src="slot.js"></script>
 </head>
 <body>
-<div class="hd">
-</div>
 <div class="bd">
 	<h1 style="color:white">Gambling with floods</h1>
 	<div class="container">
@@ -126,9 +130,11 @@ button {
 			<div id="slot3" class="slot3"></div>
 			<div id="slot4" class="slot4"></div>
 		</div>
-		<div id="result"></div>
-		<div><button id="control">Start</button></div>
-		<div><button id="check">Check</button></div>
-	</div> <video id="video1" class="video1" controls=""> <source src="clipxx.mpg" type="video/mp4"></video> </div>
+		<div id="result"> RESULT HERE </div>
+		<div class="button1"><button id="control">Start</button></div>
+		<div class="button2"><button id="check">Check</button></div>
+                <div id="result" color="blue">  </div>
+                <div id="videofile" color="blue">  </div>
+	</div> <video id="video1" class="video1" controls="" poster="images/poster.jpg" type="video/mp4"></video> </div>
 </body>
 </html>
